@@ -1,0 +1,31 @@
+@use '../variables/colors' as *;
+@use '../variables/variables' as *;
+
+.CurrentLocation {
+    @include container ($primary-bg-color-dark, $container-border-dark);
+    @include flexbox (flex, center, center);
+    border-radius: 1.563rem;
+    gap: $size-10;
+    padding: 0.313rem 0.75rem;
+
+    @media screen and (max-width: $tablet) {
+        padding: 0.313rem $size-10;
+    }
+
+    i {
+        font-size: 1.563rem;
+        
+        @media screen and (max-width: $tablet) {
+            font-size: $size-20;
+        }
+    }
+
+    span {
+        color: $secondary-text-color-dark;
+        margin-right: 0.313rem;
+
+        @media screen and (max-width: $laptop) {
+            display: none;
+        }
+    }
+}

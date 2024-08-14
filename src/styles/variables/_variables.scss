@@ -8,17 +8,17 @@ $size-30: 1.875rem;
 
 // screen
 $phone: 580px;
-$LGphone: 768px;
-$tablet: 1024px;
+$tablet: 768px;
+$laptop: 1024px;
 $desktop: 1250px;
 
 // font-weight
 $light: 300;
 $semi-bold: 600;
 
-@mixin container {
-    background: $container-bg-dark;
-    border: 1px solid $container-border-dark;
+@mixin container ($background, $border) {
+    background: $background;
+    border: 1px solid $border;
 }
 
 @mixin flexbox ($display, $align, $justify) {

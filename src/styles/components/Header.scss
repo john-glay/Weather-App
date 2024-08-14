@@ -1,0 +1,15 @@
+@use '../variables/variables' as *;
+
+.Header {
+    @include flexbox (flex, center, space-between);
+
+    .header-icons {
+        @include flexbox (flex, center, right);
+        flex-wrap: wrap;
+        gap: 0.938rem;
+
+        @media screen and (max-width: $laptop) {
+            gap: $size-10;
+        }
+    }
+}

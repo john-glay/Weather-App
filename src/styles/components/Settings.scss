@@ -1,0 +1,20 @@
+@use '../variables/colors' as *;
+@use '../variables/variables' as *;
+
+.Settings {
+    @include container ($primary-bg-color-dark, $container-border-dark);
+    border-radius: 1.563rem;
+    padding: 0.313rem 0.75rem;
+
+    @media screen and (max-width: $tablet) {
+        padding: 0.313rem $size-10;
+    }
+
+    i {
+        font-size: 1.563rem;
+
+        @media screen and (max-width: $tablet) {
+            font-size: $size-20;
+        }
+    }
+}

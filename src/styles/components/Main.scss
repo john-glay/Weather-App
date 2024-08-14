@@ -2,5 +2,33 @@
 @use '../variables/variables' as *;
 
 .Main {
-    @include container;
+    @include container ($container-bg-dark, $container-border-dark);
+    border-radius: $size-20;
+    padding: $size-30;
+
+    @media screen and (min-width: $desktop) {
+        width: 56.25rem;
+    }
+
+    @media screen and (max-width: $desktop) {
+        margin: 0 auto 2.813rem auto;
+        width: 59.375rem;
+    }
+
+    @media screen and (max-width: $laptop) {
+        padding: $size-30;
+        width: 43.75rem;
+    }
+
+    @media screen and (max-width: $tablet) {
+        border-radius: $size-15;
+        font-size: 0.875rem;
+        padding: $size-15;
+        width: 32.5rem;
+    }
+
+    @media screen and (max-width: $phone) {
+        margin: 0;
+        width: auto;
+    }
 }

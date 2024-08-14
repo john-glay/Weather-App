@@ -2,10 +2,10 @@
 @use '../variables/variables' as *;
 
 .Sidebar {
-    @include container;
+    @include container ($container-bg-dark, $container-border-dark);
     border-radius: $size-20;
 
-    @media screen and (min-width: $LGphone) {
+    @media screen and (min-width: $tablet) {
         @include flexbox (flex, center, space-around);
     }
 
@@ -21,17 +21,17 @@
         width: 59.375rem;
     }
 
-    @media screen and (max-width: $tablet) {
+    @media screen and (max-width: $laptop) {
         width: 43.75rem;
     }
 
-    @media screen and (max-width: $LGphone) {
+    @media screen and (max-width: $tablet) {
         border-radius: $size-15;
+        font-size: 0.875rem;
         width: 32.5rem;
     }
 
     @media screen and (max-width: $phone) {
-        font-size: 0.875rem;
         margin: 0 0 $size-15 0;
         width: auto;
     }
