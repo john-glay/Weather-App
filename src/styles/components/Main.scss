@@ -1,0 +1,6 @@
+@use '../variables/colors' as *;
+@use '../variables/variables' as *;
+
+.Main {
+    @include container;
+}

@@ -1,0 +1,34 @@
+@use '../variables/colors' as *;
+
+// px to rem
+$size-10: 0.625rem;
+$size-15: 0.938rem;
+$size-20: 1.25rem;
+$size-30: 1.875rem;
+
+// screen
+$phone: 580px;
+$LGphone: 768px;
+$tablet: 1024px;
+$desktop: 1250px;
+
+// font-weight
+$light: 300;
+$semi-bold: 600;
+
+@mixin container {
+    background: $container-bg-dark;
+    border: 1px solid $container-border-dark;
+}
+
+@mixin flexbox ($display, $align, $justify) {
+    display: $display;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin no-text-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}

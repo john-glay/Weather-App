@@ -1,0 +1,51 @@
+@use '../variables/colors' as *;
+@use '../variables/variables' as *;
+
+.Sidebar {
+    @include container;
+    border-radius: $size-20;
+
+    @media screen and (min-width: $LGphone) {
+        @include flexbox (flex, center, space-around);
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: block;
+        padding: $size-30;
+        width: 17.188rem;
+    }
+
+    @media screen and (max-width: $desktop) {
+        margin: 2.813rem auto $size-30 auto;
+        padding: $size-15;
+        width: 59.375rem;
+    }
+
+    @media screen and (max-width: $tablet) {
+        width: 43.75rem;
+    }
+
+    @media screen and (max-width: $LGphone) {
+        border-radius: $size-15;
+        width: 32.5rem;
+    }
+
+    @media screen and (max-width: $phone) {
+        font-size: 0.875rem;
+        margin: 0 0 $size-15 0;
+        width: auto;
+    }
+
+    .date {
+        color: $secondary-text-color-dark;
+        font-weight: $light;
+
+        @media screen and (max-width: $desktop) {
+            text-align: center;
+        }
+
+        span {
+            margin: 0 0.5rem;
+        }
+    }
+}

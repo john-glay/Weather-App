@@ -1,0 +1,9 @@
+@use '../variables/variables' as *;
+
+.Content {
+    @media screen and (min-width: $desktop) {
+        @include flexbox (flex, start, center);
+        margin: 2.813rem 0;
+        gap: $size-30;
+    }
+}

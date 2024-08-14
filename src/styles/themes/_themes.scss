@@ -1,0 +1,13 @@
+@use '../variables/colors' as *;
+
+.App-light {
+  --main-bg-color: #{$main-bg-color-light};
+  --primary-text-color: #{$primary-text-color-light};
+  --secondary-text-color: #{$secondary-text-color-light};
+}
+
+.App-dark {
+  --main-bg-color: #{$main-bg-color-dark};
+  --primary-text-color: #{$primary-text-color-dark};
+  --secondary-text-color: #{$secondary-text-color-dark};
+}

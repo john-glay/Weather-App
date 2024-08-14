@@ -1,0 +1,34 @@
+@use '../variables/colors' as *;
+@use '../variables/variables' as *;
+
+.Place {
+    @include flexbox (flex, center, left);
+    
+    @media screen and (max-width: $desktop) {
+        @include flexbox (flex, center, center);
+    }
+
+    i {
+        margin-right: 0.313rem;
+        
+        @media screen and (min-width: $desktop) {
+            font-size: $size-30;
+            margin-right: 0.625rem;
+        }
+    }
+    
+    .location {
+        @media screen and (max-width: $desktop) {
+            display: flex;
+        }
+
+        .city {
+            font-weight: $semi-bold;
+        }
+
+        .country {
+            color: $secondary-text-color-dark;
+            font-weight: $light;
+        }
+    }
+}
