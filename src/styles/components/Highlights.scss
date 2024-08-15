@@ -1,0 +1,46 @@
+@use '../variables/variables' as *;
+
+.Highlights {
+    margin-top: $size-30;
+
+    @media screen and (max-width: $tablet) {
+        margin-top: $size-15;
+    }
+
+    .title {
+        font-size: 1.125rem;
+        font-weight: $semi-bold;
+
+        @media screen and (max-width: $tablet) {
+            font-size: 1rem;
+            margin-bottom: $size-10;
+        }
+    }
+
+    .top-info {
+        margin-top: $size-20;
+        
+        @media screen and (min-width: $desktop) {
+            display: flex;
+            gap: $size-20;
+        } 
+
+        @media screen and (max-width: $tablet) {
+            margin-top: $size-10;
+        }
+
+        .sun-and-air {
+            @media screen and (min-width: $laptop) {
+                display: flex;
+                gap: $size-20;
+                margin-bottom: $size-20;
+            }    
+
+            @media screen and (min-width: $desktop) {
+                display: block;
+                margin-bottom: 0;
+            }   
+        }
+    }
+}
+

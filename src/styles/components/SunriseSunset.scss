@@ -1,0 +1,58 @@
+@use '../variables/colors' as *;
+@use '../variables/variables' as *;
+
+.SunriseSunset {
+    @include card();
+    @include flexbox (flex, center, space-around);
+    padding: $size-10 $size-20 $size-20 $size-20;
+
+    &::before {
+        @include card-before();
+    }
+
+    @media screen and (min-width: $laptop) {
+        gap: $size-20;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: auto;
+    }
+
+    @media screen and (max-width: $tablet) {
+        padding: 0.313rem $size-15 $size-15 $size-15;
+    }
+
+    .sun {
+        @include flexbox (flex, center, left);
+        gap: $size-10;
+
+        @media screen and (max-width: $desktop) {
+            gap: $size-15;
+        }
+
+        i {
+            font-size: 2.813rem;
+            height: $size-30;
+
+            @media screen and (max-width: $phone) {
+                display: none;
+            }
+        }
+
+        p {
+            font-size: $size-30;
+            font-weight: $semi-bold;
+            line-height: 2rem;
+    
+            span {
+                color: $secondary-text-color-dark;
+                font-size: 0.938rem;
+                font-weight: $light;
+
+                @media screen and (max-width: $tablet) {
+                    font-size: 0.875rem;
+                }
+            }
+        }
+    }
+}

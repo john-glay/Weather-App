@@ -1,0 +1,16 @@
+@use '../variables/colors' as *;
+@use '../variables/variables' as *;
+
+.Map {
+    background: $primary-bg-color-dark;
+    border-radius: $size-10;
+    height: 25rem;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+
+    @media screen and (min-width: $desktop) {
+        height: auto;
+        width: 47.2%;
+    }
+}

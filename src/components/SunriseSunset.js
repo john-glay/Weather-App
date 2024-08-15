@@ -1,0 +1,37 @@
+import "../styles/components/SunriseSunset.scss";
+
+const sunRiseSet = [
+  {
+    id: 0,
+    name: "Sunrise",
+    icon: "sunrise",
+    time: "00:00",
+    abbreviation: "AM",
+  },
+  {
+    id: 1,
+    name: "Sunset",
+    icon: "sunset",
+    time: "00:00",
+    abbreviation: "PM",
+  },
+];
+
+function SunriseSunset() {
+  return (
+    <div className="SunriseSunset">
+      {sunRiseSet.map(({ id, name, icon, time, abbreviation }) => (
+        <div className="sun" key={id}>
+          <i class={`bi bi-${icon}`}></i>
+          <p>
+            <span>{name}</span>
+            <br />
+            {time} {abbreviation}
+          </p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default SunriseSunset;

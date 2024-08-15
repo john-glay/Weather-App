@@ -21,12 +21,16 @@
         color: white;
         font-size: 1rem;
         padding: $size-15 $size-20 $size-15 3rem;
-        width: 25rem;
+        width: 28rem;
+
+        @media screen and (max-width: $laptop) {
+            width: 20rem;
+        }
 
         @media screen and (max-width: $tablet) {
             font-size: 0.875rem;
             padding: $size-10 $size-20 $size-10 2.313rem;
-            width: 18.75rem;
+            width: 16rem;
         }
 
         @media screen and (max-width: $phone) {

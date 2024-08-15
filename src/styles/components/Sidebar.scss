@@ -4,6 +4,8 @@
 .Sidebar {
     @include container ($container-bg-dark, $container-border-dark);
     border-radius: $size-20;
+    box-shadow: $shadow-1;
+    transition: $transition-1;
 
     @media screen and (min-width: $tablet) {
         @include flexbox (flex, center, space-around);
@@ -42,6 +44,10 @@
 
         @media screen and (max-width: $desktop) {
             text-align: center;
+        }
+
+        @media screen and (max-width: $tablet) {
+            display: none;
         }
 
         span {

@@ -7,6 +7,9 @@ function Place() {
       <div className="location">
         <p className="city">Manila,&nbsp;</p>
         <p className="country">Philippines</p>
+        <p className="place-date">
+          <span>•</span>00 Mon, Day
+        </p>
       </div>
     </div>
   );

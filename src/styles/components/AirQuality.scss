@@ -1,0 +1,79 @@
+@use '../variables/colors' as *;
+@use '../variables/variables' as *;
+
+.AirQuality {
+    @include card();
+    padding: $size-20;
+
+    &::before {
+        @include card-before();
+    }
+
+    @media screen and (min-width: $laptop) {
+        width: 46%;
+    }
+    
+    @media screen and (min-width: $desktop) {
+        margin-top: $size-20;
+        width: auto;
+    }
+
+    @media screen and (max-width: $laptop) {
+        margin: $size-20 0;
+    }
+
+    @media screen and (max-width: $tablet) {
+        margin: $size-15 0;
+        padding: $size-15 $size-15 $size-10 $size-15;
+    }
+
+    .air-header {
+        @include flexbox (flex, start, space-between);
+        margin-bottom: $size-20;
+
+        @media screen and (max-width: $tablet) {
+            margin-bottom: $size-15;
+        }
+
+        .air-title {
+            color: $secondary-text-color-dark;
+            font-weight: $light;
+        }
+
+        .air-index {
+            background: green;
+            border-radius: $size-30;
+            font-size: 0.75rem;
+            padding: 0.125rem 0.813rem;
+
+            @media screen and (max-width: $phone) {
+                font-size: 0.688rem;
+                padding: 0.125rem 0.75rem;
+            }
+        }
+    }
+
+    .air-pollutants {
+        @include flexbox (flex, center, space-around);
+
+        .pollutant {
+            p {
+                font-size: $size-30;
+                font-weight: $semi-bold;
+                line-height: 2rem;
+
+                span {
+                    color: $secondary-text-color-dark;
+                    display: block;
+                    font-size: 0.938rem;
+                    font-weight: $light;
+                    text-align: center;
+
+                    @media screen and (max-width: $tablet) {
+                        font-size: 0.875rem;
+                    }
+                }
+            }
+        }
+    }
+}

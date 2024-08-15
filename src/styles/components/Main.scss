@@ -3,11 +3,14 @@
 
 .Main {
     @include container ($container-bg-dark, $container-border-dark);
+    animation: $animation-1;
     border-radius: $size-20;
+    box-shadow: $shadow-1;
     padding: $size-30;
+    transition: $transition-1;
 
     @media screen and (min-width: $desktop) {
-        width: 56.25rem;
+        width: 59.375rem;
     }
 
     @media screen and (max-width: $desktop) {

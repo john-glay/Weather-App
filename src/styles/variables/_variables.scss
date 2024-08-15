@@ -1,24 +1,53 @@
 @use '../variables/colors' as *;
 
-// px to rem
+// PX TO REM
 $size-10: 0.625rem;
 $size-15: 0.938rem;
 $size-20: 1.25rem;
 $size-30: 1.875rem;
 
-// screen
+// SCREEN SIZES
 $phone: 580px;
 $tablet: 768px;
 $laptop: 1024px;
 $desktop: 1250px;
 
-// font-weight
+// FONT-WEIGHT
 $light: 300;
 $semi-bold: 600;
+
+// TRANSITION
+$transition-1: 0.5s ease-in-out;
+
+// ANIMATION
+$animation-1: fade 0.5s ease backwards;
+
+@keyframes fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
 
 @mixin container ($background, $border) {
     background: $background;
     border: 1px solid $border;
+}
+
+@mixin card {
+    background: $border-gradient;
+    border-radius: $size-10;
+    box-shadow: $shadow-2;
+    position: relative;
+    width: auto;
+    z-index: 1;
+}
+
+@mixin card-before {
+    background: $bg-gradient;
+    border-radius: inherit;
+    content: "";
+    inset: 1px;
+    position: absolute;
+    z-index: -1;
 }
 
 @mixin flexbox ($display, $align, $justify) {

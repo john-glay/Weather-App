@@ -30,5 +30,18 @@
             color: $secondary-text-color-dark;
             font-weight: $light;
         }
+
+        .place-date {
+            color: $secondary-text-color-dark;
+            font-weight: $light;
+
+            @media screen and (min-width: $tablet) {
+                display: none;
+            }
+
+            span {
+                margin: 0 0.5rem;
+            }
+        }
     }
 }
