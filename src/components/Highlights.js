@@ -1,4 +1,5 @@
 import Map from "./Map";
+import Widgets from "./Widgets";
 import AirQuality from "./AirQuality";
 import SunriseSunset from "./SunriseSunset";
 import "../styles/components/Highlights.scss";
@@ -11,10 +12,7 @@ function Highlights() {
         <SunriseSunset />
         <AirQuality />
         <Map />
-        <div className="one">one</div>
-        <div className="two">two</div>
-        <div className="three">three</div>
-        <div className="four">four</div>
+        <Widgets />
       </div>
     </div>
   );

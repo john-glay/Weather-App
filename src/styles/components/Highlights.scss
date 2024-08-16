@@ -20,27 +20,12 @@
     .info {
         display: grid;
         gap: $size-20;
+        grid-template-columns: repeat(4, 1fr);
         margin-top: $size-20;
 
         @media screen and (max-width: $tablet) {
             gap: $size-15;
             margin-top: $size-10;
-        }
-
-        @media screen and (min-width: $laptop) {
-            grid-template-columns: 1.1fr 1fr;
-        } 
-
-        @media screen and (min-width: $desktop) {
-            grid-template-columns: 1.05fr 1fr 1fr 1fr;
-        } 
-
-        .one,
-        .two,
-        .three,
-        .four {
-            background: $primary-bg-color-dark;
-            height: 50px;
         }
     }
 }

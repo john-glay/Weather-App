@@ -1,40 +1,35 @@
 @use '../variables/colors' as *;
 @use '../variables/variables' as *;
 
-.SunriseSunset {
+.Widgets {
     @include card();
-    @include flexbox (flex, center, space-around);
-    grid-column: span 4;
+    @include flexbox (flex, center, center);
     padding: $size-10 0.75rem $size-20 0.75rem;
 
     &::before {
         @include card-before();
     }
-    
-    @media screen and (min-width: $laptop) {
-        grid-column: span 2;
-    } 
 
     @media screen and (max-width: $tablet) {
         padding: 0.313rem $size-15 $size-15 $size-15;
     }
 
-    .sun {
-        @include flexbox (flex, center, left);
-        gap: $size-10;
+    @media screen and (max-width: $laptop) {
+        grid-column: span 2;
+    }
 
-        @media screen and (max-width: $desktop) {
+    .widget {
+        @include flexbox (flex, center, center);
+        gap: $size-20;
+
+        @media screen and (max-width: $laptop) {
             gap: $size-15;
         }
 
         i {
             color: $icon-text-color-dark;
-            font-size: 2.813rem;
-            height: $size-30;
-
-            @media screen and (max-width: $phone) {
-                display: none;
-            }
+            font-size: 2.188rem;
+            height: 1.563rem;
         }
 
         p {
@@ -52,7 +47,7 @@
                 }
             }
 
-            .abv {
+            .unit {
                 font-size: 1.125rem;
             }
         }

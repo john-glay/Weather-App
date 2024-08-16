@@ -3,16 +3,19 @@
 
 .AirQuality {
     @include card();
+    grid-column: span 4;
     padding: $size-20;
 
     &::before {
         @include card-before();
     }
     
-    @media screen and (min-width: $desktop) {
+    @media screen and (min-width: $laptop) {
         grid-column: span 2;
+    } 
+    
+    @media screen and (min-width: $desktop) {
         grid-row-start: 2;
-        width: auto;
     }
 
     @media screen and (max-width: $tablet) {
