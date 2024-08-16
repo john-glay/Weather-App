@@ -7,13 +7,15 @@ $secondary-text-color-light: #65676b;
 $main-bg-color-dark: #121212;
 $container-bg-dark: #1e1e1e; 
 $primary-bg-color-dark: #282828;
-$container-border-dark: #393939;   
+$container-border-dark: #393939;
+$icon-text-color-dark: #d6d6d680;   
 $primary-text-color-dark: #ffffff;
 $secondary-text-color-dark: #d6d6d6;
 
 // GRADIENTS
 $bg-gradient: linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
 $border-gradient: linear-gradient(to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50%);
+$container-gradient: linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%);
 
 // SHADOWS
 $shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);

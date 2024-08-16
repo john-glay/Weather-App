@@ -7,14 +7,15 @@ function Highlights() {
   return (
     <div className="Highlights">
       <h1 className="title">Today's Highlights</h1>
-      <div className="top-info">
-        <div className="sun-and-air">
-          <SunriseSunset />
-          <AirQuality />
-        </div>
+      <div className="info">
+        <SunriseSunset />
+        <AirQuality />
         <Map />
+        <div className="one">one</div>
+        <div className="two">two</div>
+        <div className="three">three</div>
+        <div className="four">four</div>
       </div>
-      {/* <div className="bottom-info"></div> */}
     </div>
   );
 }

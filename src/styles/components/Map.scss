@@ -5,12 +5,15 @@
     background: $primary-bg-color-dark;
     border-radius: $size-10;
     height: 25rem;
-    position: relative;
     width: 100%;
     z-index: 1;
 
+    @media screen and (min-width: $laptop) {
+        grid-column: span 2;
+    }
+
     @media screen and (min-width: $desktop) {
+        grid-row: span 2;
         height: auto;
-        width: 47.2%;
     }
 }

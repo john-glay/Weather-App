@@ -4,17 +4,14 @@
 .SunriseSunset {
     @include card();
     @include flexbox (flex, center, space-around);
-    padding: $size-10 $size-20 $size-20 $size-20;
+    padding: $size-10 0.75rem $size-20 0.75rem;
 
     &::before {
         @include card-before();
     }
 
-    @media screen and (min-width: $laptop) {
-        gap: $size-20;
-    }
-
     @media screen and (min-width: $desktop) {
+        grid-column: span 2;
         width: auto;
     }
 
@@ -31,6 +28,7 @@
         }
 
         i {
+            color: $icon-text-color-dark;
             font-size: 2.813rem;
             height: $size-30;
 
