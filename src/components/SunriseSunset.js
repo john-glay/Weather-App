@@ -24,9 +24,9 @@ function SunriseSunset() {
         <div className="sun" key={id}>
           <i class={`bi bi-${icon}`}></i>
           <p>
-            <span className="name">{name}</span>
+            <span className="sun-name">{name}</span>
             <br />
-            {time} <span className="abv">{abbreviation}</span>
+            {time} <span className="sun-abv">{abbreviation}</span>
           </p>
         </div>
       ))}

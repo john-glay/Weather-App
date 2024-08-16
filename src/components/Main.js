@@ -1,5 +1,6 @@
 import Header from "./Header";
 import Highlights from "./Highlights";
+import HourlyForecast from "./HourlyForecast";
 import "../styles/components/Main.scss";
 
 function Main() {
@@ -7,6 +8,7 @@ function Main() {
     <div className="Main">
       <Header />
       <Highlights />
+      <HourlyForecast />
     </div>
   );
 }

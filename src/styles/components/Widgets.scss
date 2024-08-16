@@ -37,7 +37,7 @@
             font-weight: $semi-bold;
             line-height: 2rem;
     
-            .name {
+            .widget-name {
                 color: $secondary-text-color-dark;
                 font-size: 0.938rem;
                 font-weight: $light;
@@ -47,7 +47,7 @@
                 }
             }
 
-            .unit {
+            .widget-unit {
                 font-size: 1.125rem;
             }
         }

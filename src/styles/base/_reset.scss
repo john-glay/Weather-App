@@ -1,3 +1,5 @@
+@use '../variables/colors' as *;
+@use '../variables/variables' as *;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 * {
@@ -10,4 +12,30 @@ html,
 input {
   font-size: 0.938rem;
   font-family: 'Poppins', sans-serif;
+}
+
+@media screen and (min-width: $desktop) {
+  body::-webkit-scrollbar { 
+    width: $size-20; 
+  }
+
+  body::-webkit-scrollbar-track { 
+    background: $main-bg-color-dark; 
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: #ffffff1a;
+    border: 0.313rem solid $main-bg-color-dark;
+    border-radius: $size-20;
+    box-shadow: inset 1px 1px 0 #ffffff1c, inset -1px -1px 0 #ffffff1c;
+  }
+
+  body::-webkit-scrollbar-thumb:hover { 
+    background: #ffffff26; 
+  }
+
+  body::-webkit-scrollbar-button { 
+    background: $main-bg-color-dark; 
+    height: 3.75rem; 
+  }
 }

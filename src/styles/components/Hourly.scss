@@ -1,0 +1,11 @@
+@use '../variables/colors' as *;
+@use '../variables/variables' as *;
+
+.Hourly {
+    background: $container-bg-dark;
+    border: 1px solid $container-border-dark;
+    border-radius: $size-10;
+    height: 150px;
+    align-content: center;
+    text-align: center;
+}

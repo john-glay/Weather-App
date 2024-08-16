@@ -8,7 +8,7 @@ function Highlights() {
   return (
     <div className="Highlights">
       <h1 className="title">Today's Highlights</h1>
-      <div className="info">
+      <div className="highlights-info">
         <SunriseSunset />
         <AirQuality />
         <Map />

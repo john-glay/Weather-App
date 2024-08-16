@@ -1,7 +1,7 @@
 @use '../variables/colors' as *;
 @use '../variables/variables' as *;
 
-.Highlights {
+.HourlyForecast {
     margin-top: $size-30;
 
     @media screen and (max-width: $tablet) {
@@ -17,16 +17,10 @@
         }
     }
 
-    .highlights-info {
+    .hourly-info {
         display: grid;
         gap: $size-20;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(7, 1fr);
         margin-top: $size-20;
-
-        @media screen and (max-width: $tablet) {
-            gap: $size-15;
-            margin-top: $size-10;
-        }
     }
 }
-

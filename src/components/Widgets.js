@@ -39,9 +39,9 @@ function Widgets() {
           <div className="widget">
             <i class={`bi bi-${icon}`}></i>
             <p>
-              <span className="name">{name}</span>
+              <span className="widget-name">{name}</span>
               <br />
-              {value} <span className="unit">{unit}</span>
+              {value} <span className="widget-unit">{unit}</span>
             </p>
           </div>
         </div>
