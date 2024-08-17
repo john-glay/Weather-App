@@ -2,7 +2,7 @@
 @use '../variables/variables' as *;
 
 .HourlyForecast {
-    margin-top: $size-30;
+    margin: $size-30 1px 0 0;
 
     @media screen and (max-width: $tablet) {
         margin-top: $size-15;
@@ -18,9 +18,19 @@
     }
 
     .hourly-info {
-        display: grid;
+        cursor: pointer;
+        display: flex;
         gap: $size-20;
-        grid-template-columns: repeat(7, 1fr);
         margin-top: $size-20;
+        overflow: hidden;
+
+        @media screen and (max-width: $tablet) {
+            gap: $size-15;
+            margin-top: $size-10;
+        }
+
+        .no-text-select {
+            @include no-text-select; 
+        }
     }
 }

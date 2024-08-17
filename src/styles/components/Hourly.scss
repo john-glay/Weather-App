@@ -1,11 +1,42 @@
 @use '../variables/colors' as *;
 @use '../variables/variables' as *;
 
-.Hourly {
+.day {
+    margin-bottom: 0.125rem;
+    text-align: center;
+
+    @media screen and (max-width: $tablet) {
+        font-size: 0.875rem;
+    }
+}
+
+.hourly { 
     background: $container-bg-dark;
     border: 1px solid $container-border-dark;
     border-radius: $size-10;
-    height: 150px;
-    align-content: center;
-    text-align: center;
+    padding: 1.188rem 1.75rem;
+
+    .time {
+        font-weight: $light;
+        text-align: center;
+
+        @media screen and (max-width: $tablet) {
+            font-size: 0.875rem;
+        }
+    }
+
+    img {
+        display: block;
+        height: 3.125rem;
+        margin: $size-10 auto;
+    }
+
+    .hourly-temp {
+        font-weight: $semi-bold;
+        text-align: center;
+
+        @media screen and (max-width: $tablet) {
+            font-size: 0.875rem;
+        }
+    }
 }
