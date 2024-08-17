@@ -1,9 +1,12 @@
 import "../styles/components/Weather.scss";
+import WeatherIcon from "./WeatherIcon";
 
 function Weather() {
+  const icon = "10d";
+
   return (
     <div className="Weather">
-      <img src="images/weather-icons/10d.png" alt="description" />
+      <WeatherIcon icon={icon} />
       <div>
         <p className="temperature">
           99<span>°C</span>
