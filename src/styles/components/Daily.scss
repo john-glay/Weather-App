@@ -1,0 +1,39 @@
+@use '../variables/colors' as *;
+@use '../variables/variables' as *;
+
+.Daily {
+    @include card();
+    border-radius: $size-10;
+    padding: 1.188rem;
+
+    &::before {
+        @include card-before();
+    }
+
+    .daily-weather {
+        @include flexbox (flex, center, center);
+        gap: $size-15;
+
+        img {
+            height: 3.125rem;
+        }
+
+        .daily-temp {
+            font-weight: $semi-bold;
+
+            @media screen and (max-width: $tablet) {
+                font-size: 0.875rem;
+            }
+        }
+    }
+
+    .daily-date {
+        font-weight: $light;
+        margin-top: $size-10;
+        text-align: center;
+
+        @media screen and (max-width: $tablet) {
+            font-size: 0.875rem;
+        }
+    }
+}

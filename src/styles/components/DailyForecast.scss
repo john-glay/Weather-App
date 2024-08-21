@@ -1,0 +1,43 @@
+@use '../variables/colors' as *;
+@use '../variables/variables' as *;
+
+.DailyForecast {
+    margin-top: $size-30;
+
+    @media screen and (max-width: $tablet) {
+        margin-top: $size-15;
+    }
+
+    .title {
+        font-size: 1.125rem;
+        font-weight: $semi-bold;
+
+        @media screen and (max-width: $tablet) {
+            font-size: 1rem;
+        }
+    }
+
+    .daily-info {
+        display: grid;
+        gap: $size-20;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: $size-20;
+
+        @media screen and (min-width: $tablet) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media screen and (min-width: $laptop) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @media screen and (min-width: $desktop) {
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        @media screen and (max-width: $tablet) {
+            gap: $size-15;
+            margin-top: $size-10;
+        }
+    }
+}
