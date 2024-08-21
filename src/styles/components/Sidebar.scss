@@ -2,7 +2,6 @@
 @use '../variables/variables' as *;
 
 .Sidebar {
-    @include container ($container-bg-dark, $container-border-dark);
     border-radius: $size-20;
     box-shadow: $shadow-1;
     transition: $transition-1;

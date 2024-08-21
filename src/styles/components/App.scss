@@ -4,7 +4,12 @@
 
 .App-light,
 .App-dark {
-  background-color: var(--main-bg-color);
+  background: var(--main-bg-color);
   color: var(--primary-text-color);
   padding: $size-15 0.75rem;
+
+  .Sidebar {
+    background: var(--container-bg);
+    border: 1px solid var(--container-border);
+  }
 }
