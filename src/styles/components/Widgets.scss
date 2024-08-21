@@ -2,13 +2,10 @@
 @use '../variables/variables' as *;
 
 .Widgets {
-    @include card();
     @include flexbox (flex, center, center);
+    background: $primary-bg-color-dark;
+    border-radius: $size-10;
     padding: $size-10 0.75rem $size-20 0.75rem;
-
-    &::before {
-        @include card-before();
-    }
 
     @media screen and (max-width: $tablet) {
         padding: 0.313rem $size-15 $size-15 $size-15;

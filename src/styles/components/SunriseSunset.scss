@@ -2,14 +2,11 @@
 @use '../variables/variables' as *;
 
 .SunriseSunset {
-    @include card();
     @include flexbox (flex, center, space-around);
+    background: $primary-bg-color-dark;
+    border-radius: $size-10;
     grid-column: span 4;
     padding: $size-10 0.75rem $size-20 0.75rem;
-
-    &::before {
-        @include card-before();
-    }
     
     @media screen and (min-width: $laptop) {
         grid-column: span 2;

@@ -2,13 +2,10 @@
 @use '../variables/variables' as *;
 
 .AirQuality {
-    @include card();
+    background: $primary-bg-color-dark;
+    border-radius: $size-10;
     grid-column: span 4;
     padding: $size-20;
-
-    &::before {
-        @include card-before();
-    }
     
     @media screen and (min-width: $laptop) {
         grid-column: span 2;

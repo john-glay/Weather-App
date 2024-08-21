@@ -3,7 +3,6 @@
 
 .Daily {
     @include card();
-    border-radius: $size-10;
     padding: 1.188rem;
 
     &::before {

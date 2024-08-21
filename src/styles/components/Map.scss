@@ -2,7 +2,7 @@
 @use '../variables/variables' as *;
 
 .Map {
-    background: $primary-bg-color-dark;
+    // background: $primary-bg-color-dark;
     border-radius: $size-10;
     grid-column: span 4;
     height: 25rem;
@@ -13,5 +13,16 @@
         grid-column: span 2;
         grid-row: span 2;
         height: auto;
+    }
+
+    .map-img {
+        border-radius: $size-10;
+        height: 25rem;
+        width: 100%;
+        object-fit: cover;
+
+        @media screen and (min-width: $desktop) {
+            height: 249.575px;
+        }
     }
 }
