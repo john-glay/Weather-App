@@ -3,19 +3,42 @@
 .App-light {
   --main-bg-color: #{$main-bg-color-light};
   --primary-text-color: #{$primary-text-color-light};
-  --secondary-text-color: #{$secondary-text-color-light};
 
   .Sidebar {
     --container-bg: #{$container-bg-light};
+    --container-border: #{$container-border-light};
+
+    .country,
+    .place-date,
+    .description,
+    .date {
+      --secondary-text-color: #{$secondary-text-color-light};
+    }
+  }
+
+  .Main {
+    --container-bg: #{$container-bg-light};
+    --container-border: #{$container-border-light};
   }
 }
 
 .App-dark {
   --main-bg-color: #{$main-bg-color-dark};
   --primary-text-color: #{$primary-text-color-dark};
-  --secondary-text-color: #{$secondary-text-color-dark};
 
   .Sidebar {
+    --container-bg: #{$container-bg-dark};
+    --container-border: #{$container-border-dark};
+
+    .country,
+    .place-date,
+    .description,
+    .date {
+      --secondary-text-color: #{$secondary-text-color-dark};
+    }
+  }
+
+  .Main {
     --container-bg: #{$container-bg-dark};
     --container-border: #{$container-border-dark};
   }

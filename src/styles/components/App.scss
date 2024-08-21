@@ -7,9 +7,11 @@
   background: var(--main-bg-color);
   color: var(--primary-text-color);
   padding: $size-15 0.75rem;
+  transition: $transition-1;
 
-  .Sidebar {
+  .Sidebar,
+  .Main {
     background: var(--container-bg);
-    border: 1px solid var(--container-border);
+    border: 1px solid var(--container-border); 
   }
 }
