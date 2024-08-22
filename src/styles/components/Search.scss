@@ -16,12 +16,11 @@
     }
 
     input {
-        @include container ($container-bg-dark, $container-border-dark);
         border-radius: $size-10;
-        color: white;
         font-size: 1rem;
         padding: $size-15 $size-20 $size-15 3rem;
         width: 27.2rem;
+        transition: $transition-1;
 
         @media screen and (max-width: $laptop) {
             width: 20rem;

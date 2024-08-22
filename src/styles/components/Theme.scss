@@ -2,10 +2,10 @@
 @use '../variables/variables' as *;
 
 .Theme {
-    @include container ($primary-bg-color-dark, $container-border-dark);
     border-radius: 1.563rem;
     cursor: pointer;
     padding: 0.313rem 0.75rem;
+    transition: $transition-1;
 
     @media screen and (max-width: $tablet) {
         padding: 0.313rem $size-10;

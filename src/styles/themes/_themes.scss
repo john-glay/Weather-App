@@ -19,6 +19,20 @@
   .Main {
     --container-bg: #{$container-bg-light};
     --container-border: #{$container-border-light};
+
+    input {
+      background: #{$container-bg-light};
+      border: 1px solid #{$container-border-light};
+      color: #{$primary-text-color-light};
+    }
+
+    .CurrentLocation,
+    .Theme,
+    .Settings {
+      background: #{$primary-bg-color-light};
+      border: 1px solid #{$container-border-light};
+      color: #{$primary-text-color-light};
+    }
   }
 }
 
@@ -41,5 +55,19 @@
   .Main {
     --container-bg: #{$container-bg-dark};
     --container-border: #{$container-border-dark};
+
+    input {
+      background: #{$container-bg-dark};
+      border: 1px solid #{$container-border-dark};
+      color: #{$primary-text-color-dark};
+    }
+
+    .CurrentLocation,
+    .Theme,
+    .Settings {
+      background: #{$primary-bg-color-dark};
+      border: 1px solid #{$container-border-dark};
+      color: #{$primary-text-color-dark};
+    }
   }
 }

@@ -12,6 +12,7 @@
   .Sidebar,
   .Main {
     background: var(--container-bg);
-    border: 1px solid var(--container-border); 
+    border: 1px solid var(--container-border);
+    transition: $transition-1;
   }
 }
