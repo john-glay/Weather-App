@@ -14,28 +14,42 @@ input {
   font-family: 'Poppins', sans-serif;
 }
 
+body.light-theme {
+  --background: #0000001a;
+  --box-shadow: inset 1px 1px 0 #0000001c, inset -1px -1px 0 #0000001c;
+  --hover: #00000026;
+  --main-bg-color: #{$main-bg-color-light};
+}
+
+body.dark-theme {
+  --background: #ffffff1a;
+  --box-shadow: inset 1px 1px 0 #ffffff1c, inset -1px -1px 0 #ffffff1c;
+  --hover: #ffffff26;
+  --main-bg-color: #{$main-bg-color-dark};
+}
+
 @media screen and (min-width: $desktop) {
   body::-webkit-scrollbar { 
     width: $size-20; 
   }
 
   body::-webkit-scrollbar-track { 
-    background: $main-bg-color-dark; 
+    background: var(--main-bg-color); 
   }
 
   body::-webkit-scrollbar-thumb {
-    background: #ffffff1a;
-    border: 0.313rem solid $main-bg-color-dark;
+    background: var(--background);
+    border: 0.313rem solid var(--main-bg-color);
     border-radius: $size-20;
-    box-shadow: inset 1px 1px 0 #ffffff1c, inset -1px -1px 0 #ffffff1c;
+    box-shadow: var(--box-shadow);
   }
 
   body::-webkit-scrollbar-thumb:hover { 
-    background: #ffffff26; 
+    background: var(--hover); 
   }
 
   body::-webkit-scrollbar-button { 
-    background: $main-bg-color-dark; 
+    background: var(--main-bg-color); 
     height: 3.75rem; 
   }
 }
