@@ -2,10 +2,10 @@
 @use '../variables/variables' as *;
 
 .AirQuality {
-    background: $primary-bg-color-dark;
     border-radius: $size-10;
     grid-column: span 4;
     padding: $size-20;
+    transition: $transition-1;
     
     @media screen and (min-width: $laptop) {
         grid-column: span 2;
@@ -28,13 +28,13 @@
         }
 
         .air-title {
-            color: $secondary-text-color-dark;
             font-weight: $light;
         }
 
         .air-index {
             background: green;
             border-radius: $size-30;
+            color: white;
             font-size: 0.75rem;
             padding: 0.125rem 0.813rem;
 
@@ -55,7 +55,6 @@
                 line-height: 2rem;
 
                 span {
-                    color: $secondary-text-color-dark;
                     display: block;
                     font-size: 0.938rem;
                     font-weight: $light;

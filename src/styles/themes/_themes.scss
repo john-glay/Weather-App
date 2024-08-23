@@ -2,23 +2,24 @@
 
 .App-light {
   --main-bg-color: #{$main-bg-color-light};
-  --primary-text-color: #{$primary-text-color-light};
 
   .Sidebar {
     --container-bg: #{$container-bg-light};
     --container-border: #{$container-border-light};
+    --primary-text-color: #{$primary-text-color-light};
 
     .country,
     .place-date,
     .description,
     .date {
-      --secondary-text-color: #{$secondary-text-color-light};
+      color: #{$secondary-text-color-light};
     }
   }
 
   .Main {
     --container-bg: #{$container-bg-light};
     --container-border: #{$container-border-light};
+    --primary-text-color: #{$primary-text-color-light};
 
     input {
       background: #{$container-bg-light};
@@ -33,28 +34,54 @@
       border: 1px solid #{$container-border-light};
       color: #{$primary-text-color-light};
     }
+
+    .SunriseSunset,
+    .AirQuality,
+    .Widgets {
+      background: #{$primary-bg-color-light};
+    }
+
+    .sun-name,
+    .air-title ,
+    .pollutant span,
+    .widget-name,
+    .day,
+    .time {
+      color: #{$secondary-text-color-light};
+    }
+
+    .sun i,
+    .widget i {
+      color: #{$icon-text-color-light};
+    }
+
+    .Hourly {
+      background: #{$container-bg-light};
+      border: 1px solid #{$container-border-light};
+    }
   }
 }
 
 .App-dark {
   --main-bg-color: #{$main-bg-color-dark};
-  --primary-text-color: #{$primary-text-color-dark};
 
   .Sidebar {
     --container-bg: #{$container-bg-dark};
     --container-border: #{$container-border-dark};
+    --primary-text-color: #{$primary-text-color-dark};
 
     .country,
     .place-date,
     .description,
     .date {
-      --secondary-text-color: #{$secondary-text-color-dark};
+      color: #{$secondary-text-color-dark};
     }
   }
 
   .Main {
     --container-bg: #{$container-bg-dark};
     --container-border: #{$container-border-dark};
+    --primary-text-color: #{$primary-text-color-dark};
 
     input {
       background: #{$container-bg-dark};
@@ -68,6 +95,31 @@
       background: #{$primary-bg-color-dark};
       border: 1px solid #{$container-border-dark};
       color: #{$primary-text-color-dark};
+    }
+
+    .SunriseSunset,
+    .AirQuality,
+    .Widgets {
+      background: #{$primary-bg-color-dark};
+    }
+
+    .sun-name,
+    .air-title ,
+    .pollutant span,
+    .widget-name,
+    .day,
+    .time {
+      color: #{$secondary-text-color-dark};
+    }
+
+    .sun i,
+    .widget i {
+      color: #{$icon-text-color-dark};
+    }
+
+    .Hourly {
+      background: #{$container-bg-dark};
+      border: 1px solid #{$container-border-dark};
     }
   }
 }

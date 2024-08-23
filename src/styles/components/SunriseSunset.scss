@@ -3,10 +3,10 @@
 
 .SunriseSunset {
     @include flexbox (flex, center, space-around);
-    background: $primary-bg-color-dark;
     border-radius: $size-10;
     grid-column: span 4;
     padding: $size-10 0.75rem $size-20 0.75rem;
+    transition: $transition-1;
     
     @media screen and (min-width: $laptop) {
         grid-column: span 2;
@@ -25,7 +25,6 @@
         }
 
         i {
-            color: $icon-text-color-dark;
             font-size: 2.813rem;
             height: $size-30;
 
@@ -40,7 +39,6 @@
             line-height: 2rem;
     
             .sun-name {
-                color: $secondary-text-color-dark;
                 font-size: 0.938rem;
                 font-weight: $light;
 

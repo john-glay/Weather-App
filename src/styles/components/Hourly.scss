@@ -2,6 +2,7 @@
 @use '../variables/variables' as *;
 
 .day {
+    font-weight: $light;
     margin-bottom: 0.125rem;
     text-align: center;
 
@@ -11,10 +12,9 @@
 }
 
 .Hourly { 
-    background: $container-bg-dark;
-    border: 1px solid $container-border-dark;
     border-radius: $size-10;
     padding: 1.188rem 1.75rem;
+    transition: $transition-1;
 
     .time {
         font-weight: $light;
