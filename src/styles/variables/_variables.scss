@@ -18,10 +18,12 @@ $semi-bold: 600;
 
 // TRANSITION
 $transition-1: 0.5s ease-in-out;
+$transition-2: 0.2s ease-in-out;
 
 // ANIMATION
 $animation-1: fade 0.5s ease backwards;
 $animation-2: rotate 1s linear;
+$animation-3: tilt 2s ease infinite;
 
 @keyframes fade {
     0% { opacity: 0; }
@@ -38,6 +40,12 @@ $animation-2: rotate 1s linear;
         opacity: 1; 
         rotate: (360deg); 
     }
+}
+
+@keyframes tilt {
+    0% { rotate: (0deg); }
+
+    100% { rotate: (360deg); }
 }
 
 @mixin container ($background, $border) {

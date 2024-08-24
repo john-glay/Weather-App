@@ -35,6 +35,26 @@
       color: #{$primary-text-color-light};
     }
 
+    .CurrentLocation:hover,
+    .Theme:hover,
+    .Settings:hover {
+      background: #{$container-border-light};
+    }
+
+    .settings-menu {
+      background: #{$container-bg-light};
+      border: 1px solid #{$container-border-light};
+
+      .system {
+        border: 1px solid #{$primary-text-color-light};
+
+        &.active {
+          background: #{$primary-text-color-light};
+          color: #{$primary-text-color-dark};
+        }
+      }
+    }
+
     .SunriseSunset,
     .AirQuality,
     .Widgets {
@@ -104,6 +124,26 @@
       background: #{$primary-bg-color-dark};
       border: 1px solid #{$container-border-dark};
       color: #{$primary-text-color-dark};
+    }
+
+    .CurrentLocation:hover,
+    .Theme:hover,
+    .Settings:hover {
+      background: #{$container-border-dark};
+    }
+
+    .settings-menu {
+      background: #{$container-bg-dark};
+      border: 1px solid #{$container-border-dark};
+
+      .system {
+        border: 1px solid #{$primary-text-color-dark};
+
+        &.active {
+          background: #{$primary-text-color-dark};
+          color: #{$primary-text-color-light};
+        }
+      }
     }
 
     .SunriseSunset,

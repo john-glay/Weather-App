@@ -2,12 +2,19 @@
 @use '../variables/variables' as *;
 
 .Settings {
+    @include no-text-select;
     border-radius: 1.563rem;
+    cursor: pointer;
     padding: 0.313rem 0.75rem;
+    position: relative;
     transition: $transition-1;
 
     @media screen and (max-width: $tablet) {
         padding: 0.313rem $size-10;
+    }
+
+    &:hover {
+        transition: $transition-2;
     }
 
     i {
@@ -15,6 +22,63 @@
 
         @media screen and (max-width: $tablet) {
             font-size: $size-20;
+        }
+    }
+
+    .settings-menu {
+        border-radius: $size-10;
+        box-shadow: $shadow-2;
+        font-weight: $light;
+        margin-top: $size-20;
+        padding: $size-15;
+        position: absolute;
+        right: 0;
+        transform: scale(0.000001);
+        transform-origin: top right;
+        transition: 0.2s ease-in-out;
+        visibility: hidden;
+        z-index: 2;
+
+        &.open {
+            visibility: visible;
+            transform: scale(1);
+        }
+
+        @media screen and (max-width: 490px) {
+            width: 8.75rem;
+        }
+
+        p {
+            text-align: center;
+
+            @media screen and (max-width: $tablet) {
+                font-size: 0.875rem;
+            }
+        }
+
+        .measurements {
+            @include flexbox (flex, center, space-between);
+            font-size: 0.75rem;
+            gap: $size-10;
+            margin-top: $size-10;
+
+            @media screen and (max-width: 490px) {
+                flex-wrap: wrap;
+            }
+
+            .system {
+                border-radius: 0.313rem;
+                padding: 0.313rem $size-10;
+
+                &.active {
+                    transition: $transition-1;
+                }
+
+                @media screen and (max-width: 490px) {
+                    text-align: center;
+                    width: 100%;
+                }
+            }
         }
     }
 }

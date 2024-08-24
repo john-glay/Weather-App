@@ -3,13 +3,23 @@
 
 .CurrentLocation {
     @include flexbox (flex, center, center);
+    @include no-text-select;
     border-radius: 1.563rem;
+    cursor: pointer;
     gap: $size-10;
     padding: 0.313rem 0.75rem;
     transition: $transition-1;
 
     @media screen and (max-width: $tablet) {
         padding: 0.313rem $size-10;
+    }
+
+    &:hover {
+        transition: $transition-2;
+        
+        i {
+            animation: $animation-3;
+        }
     }
 
     i {
@@ -21,6 +31,7 @@
     }
 
     span {
+        font-weight: $light;
         margin-right: 0.313rem;
 
         @media screen and (max-width: $laptop) {

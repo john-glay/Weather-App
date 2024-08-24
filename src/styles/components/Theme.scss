@@ -11,6 +11,10 @@
         padding: 0.313rem $size-10;
     }
 
+    &:hover {
+        transition: $transition-2;
+    }
+
     .light-theme-btn,
     .dark-theme-btn {
         display: none;
