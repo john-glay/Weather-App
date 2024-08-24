@@ -1,11 +1,11 @@
 // LIGHT THEME COLORS
-$main-bg-color-light: #f3f4f6;
+$main-bg-color-light: #f5f5f5;
 $container-bg-light: #ffffff; 
-$container-border-light: #d0d0d0;
+$container-border-light: #e0e0e0;
 $primary-bg-color-light: #eeeeee;
-$icon-text-color-light: #61616180; 
-$primary-text-color-light: #424242;
-$secondary-text-color-light: #757575;
+$icon-text-color-light: #4d4d4d80;   
+$primary-text-color-light: #36373e;
+$secondary-text-color-light: #4d4d4d;
 
 // DARK THEME COLORS
 $main-bg-color-dark: #121212;
@@ -17,10 +17,13 @@ $primary-text-color-dark: #ffffff;
 $secondary-text-color-dark: #d6d6d6;
 
 // GRADIENTS
-$bg-gradient: linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
-$border-gradient: linear-gradient(to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50%);
+$bg-gradient-light: linear-gradient(to bottom right, hsla(240, 20%, 98%, 0.6) 0%, hsla(240, 15%, 95%, 0) 100%), hsl(240, 20%, 98%);
+$border-gradient-light: linear-gradient(to bottom right, hsl(0, 0%, 85%) 0%, hsla(0, 0%, 85%, 0) 50%);
+$bg-gradient-dark: linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
+$border-gradient-dark: linear-gradient(to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50%);
 $container-gradient: linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%);
 
 // SHADOWS
 $shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
 $shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
+$shadow-3: 5px 5px 10px hsla(0, 0%, 0%, 0.25);

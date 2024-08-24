@@ -59,6 +59,15 @@
       background: #{$container-bg-light};
       border: 1px solid #{$container-border-light};
     }
+
+    .Daily {
+      background: #{$border-gradient-light};
+      box-shadow: #{$shadow-3};
+
+      &::before {
+        background: #{$bg-gradient-light};
+      }
+    }
   }
 }
 
@@ -120,6 +129,15 @@
     .Hourly {
       background: #{$container-bg-dark};
       border: 1px solid #{$container-border-dark};
+    }
+
+    .Daily {
+      background: #{$border-gradient-dark};
+      box-shadow: #{$shadow-3};
+
+      &::before {
+        background: #{$bg-gradient-dark};
+      }
     }
   }
 }

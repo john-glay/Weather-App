@@ -46,20 +46,19 @@ $animation-2: rotate 1s linear;
 }
 
 @mixin card {
-    background: $border-gradient;
     border-radius: $size-10;
-    box-shadow: $shadow-2;
     position: relative;
     width: auto;
+    transition: $transition-1;
     z-index: 1;
 }
 
 @mixin card-before {
-    background: $bg-gradient;
     border-radius: inherit;
     content: "";
     inset: 1px;
     position: absolute;
+    transition: $transition-1;
     z-index: -1;
 }
 
