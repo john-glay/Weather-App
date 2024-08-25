@@ -2,11 +2,11 @@
 @use '../variables/variables' as *;
 
 .Daily {
-    @include card();
+    @include card;
     padding: 1.188rem;
 
     &::before {
-        @include card-before();
+        @include card-before;
     }
 
     .daily-weather {

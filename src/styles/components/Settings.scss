@@ -35,7 +35,7 @@
         right: 0;
         transform: scale(0.000001);
         transform-origin: top right;
-        transition: 0.2s ease-in-out;
+        transition: $transition-2;
         visibility: hidden;
         z-index: 2;
 

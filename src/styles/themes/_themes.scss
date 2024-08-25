@@ -27,6 +27,15 @@
       color: #{$primary-text-color-light};
     }
 
+    .search-results {
+      background: #{$container-bg-light};
+      border: 1px solid #{$container-border-light};
+      
+      .results-container:hover {
+          background: $container-border-light;
+      }
+    }
+
     .CurrentLocation,
     .Theme,
     .Settings {
@@ -116,6 +125,15 @@
       background: #{$container-bg-dark};
       border: 1px solid #{$container-border-dark};
       color: #{$primary-text-color-dark};
+    }
+
+    .search-results {
+      background: #{$container-bg-dark};
+      border: 1px solid #{$container-border-dark};
+      
+      .results-container:hover {
+          background: $container-border-dark;
+      }
     }
 
     .CurrentLocation,
