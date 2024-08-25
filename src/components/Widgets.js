@@ -1,37 +1,45 @@
+import { getCurrentWeather } from "../api";
 import "../styles/components/Widgets.scss";
 
-const infoWidgets = [
-  {
-    id: 0,
-    icon: "eye",
-    name: "Visibility",
-    value: "00",
-    unit: "km",
-  },
-  {
-    id: 1,
-    icon: "droplet",
-    name: "Rain",
-    value: "0.0",
-    unit: "mm",
-  },
-  {
-    id: 2,
-    icon: "moisture",
-    name: "Humidity",
-    value: "00",
-    unit: "%",
-  },
-  {
-    id: 3,
-    icon: "wind",
-    name: "Wind",
-    value: "00",
-    unit: "mph",
-  },
-];
-
 function Widgets() {
+  const data = getCurrentWeather();
+
+  const humidity = data.main.humidity;
+  const wind = data.wind.speed.toFixed(1);
+  const visibility = (data.visibility / 1000).toFixed(1);
+  const clouds = data.clouds.all;
+
+  const infoWidgets = [
+    {
+      id: 0,
+      icon: "moisture",
+      name: "Humidity",
+      value: humidity,
+      unit: "%",
+    },
+    {
+      id: 1,
+      icon: "wind",
+      name: "Wind",
+      value: wind,
+      unit: "mps", // Standard: m/s, Metric: m/s, Imperial: m/h
+    },
+    {
+      id: 2,
+      icon: "eye",
+      name: "Visibility",
+      value: visibility,
+      unit: "km",
+    },
+    {
+      id: 3,
+      icon: "clouds",
+      name: "Clouds",
+      value: clouds,
+      unit: "%",
+    },
+  ];
+
   return (
     <>
       {infoWidgets.map(({ id, icon, name, value, unit }) => (

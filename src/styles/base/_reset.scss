@@ -15,6 +15,7 @@ input {
 }
 
 body.light-theme {
+  background: $main-bg-color-light;
   --background: #0000001a;
   --box-shadow: inset 1px 1px 0 #0000001c, inset -1px -1px 0 #0000001c;
   --hover: #00000026;
@@ -22,6 +23,7 @@ body.light-theme {
 }
 
 body.dark-theme {
+  background: $main-bg-color-dark;
   --background: #ffffff1a;
   --box-shadow: inset 1px 1px 0 #ffffff1c, inset -1px -1px 0 #ffffff1c;
   --hover: #ffffff26;
