@@ -22,7 +22,7 @@ function SunriseSunset() {
     <div className="SunriseSunset">
       {sunRiseSet.map(({ id, name, icon, time, abbreviation }) => (
         <div className="sun" key={id}>
-          <i class={`bi bi-${icon}`}></i>
+          <i className={`bi bi-${icon}`}></i>
           <p>
             <span className="sun-name">{name}</span>
             <br />

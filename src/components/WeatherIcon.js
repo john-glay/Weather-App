@@ -1,8 +1,8 @@
-function WeatherIcon({ icon }) {
+function WeatherIcon({ icon, description }) {
   return (
     <img
       src={`${process.env.PUBLIC_URL}/images/weather-icons/${icon}.png`}
-      alt="{description}"
+      alt={description}
       draggable={false}
     />
   );

@@ -25,6 +25,10 @@
       background: #{$container-bg-light};
       border: 1px solid #{$container-border-light};
       color: #{$primary-text-color-light};
+
+      &::placeholder {
+        color: #{$secondary-text-color-light};
+      }
     }
 
     .search-results {
@@ -125,6 +129,10 @@
       background: #{$container-bg-dark};
       border: 1px solid #{$container-border-dark};
       color: #{$primary-text-color-dark};
+
+      &::placeholder {
+        color: #{$secondary-text-color-dark};
+      }
     }
 
     .search-results {

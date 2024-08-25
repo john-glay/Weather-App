@@ -37,7 +37,7 @@ function Widgets() {
       {infoWidgets.map(({ id, icon, name, value, unit }) => (
         <div className="Widgets" key={id}>
           <div className="widget">
-            <i class={`bi bi-${icon}`}></i>
+            <i className={`bi bi-${icon}`}></i>
             <p>
               <span className="widget-name">{name}</span>
               <br />

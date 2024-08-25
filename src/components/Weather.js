@@ -1,17 +1,21 @@
-import "../styles/components/Weather.scss";
 import WeatherIcon from "./WeatherIcon";
+import { getCurrentWeather } from "../api";
+import "../styles/components/Weather.scss";
 
 function Weather() {
-  const icon = "10d";
+  const data = getCurrentWeather();
+  const { temp } = data.main;
+  const { description, icon } = data.weather[0];
 
   return (
     <div className="Weather">
-      <WeatherIcon icon={icon} />
+      <WeatherIcon icon={icon} description={description} />
       <div>
         <p className="temperature">
-          99<span>°C</span>
+          {Math.ceil(temp)}
+          <span>°C</span>
         </p>
-        <div className="description">Moderate Rain</div>
+        <div className="description">{description}</div>
       </div>
     </div>
   );
