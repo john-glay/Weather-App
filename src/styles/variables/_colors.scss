@@ -1,6 +1,14 @@
+// BASIC COLORS
+$white: #ffffff;
+$green: #006b3d;
+$light-green: #069c56;
+$yellow: #ff980e;
+$orange: #ff681e;
+$red: #d3212c;
+
 // LIGHT THEME COLORS
 $main-bg-color-light: #f5f5f5;
-$container-bg-light: #ffffff; 
+$container-bg-light: $white; 
 $container-border-light: #e0e0e0;
 $primary-bg-color-light: #eeeeee;
 $icon-text-color-light: #4d4d4d80;   
@@ -13,7 +21,7 @@ $container-bg-dark: #1e1e1e;
 $container-border-dark: #393939;
 $primary-bg-color-dark: #282828;
 $icon-text-color-dark: #d6d6d680;   
-$primary-text-color-dark: #ffffff;
+$primary-text-color-dark: $white;
 $secondary-text-color-dark: #d6d6d6;
 
 // GRADIENTS

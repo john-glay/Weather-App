@@ -32,15 +32,31 @@
         }
 
         .air-index {
-            background: green;
             border-radius: $size-30;
-            color: white;
+            color: $white;
             font-size: 0.75rem;
             padding: 0.125rem 0.813rem;
 
             @media screen and (max-width: $phone) {
                 font-size: 0.688rem;
                 padding: 0.125rem 0.75rem;
+            }
+
+            &.good {
+                background-color: $green;
+            }
+            &.fair {
+                background-color: $light-green;
+            }
+            &.moderate {
+                background-color: $yellow;
+                color: #1e1e1e;
+            }
+            &.poor {
+                background-color: $orange;
+            }
+            &.very-poor {
+                background-color: $red;
             }
         }
     }
