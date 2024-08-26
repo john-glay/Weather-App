@@ -74,15 +74,6 @@
       background: #{$primary-bg-color-light};
     }
 
-    .sun-name,
-    .air-title ,
-    .pollutant span,
-    .widget-name,
-    .day,
-    .time {
-      color: #{$secondary-text-color-light};
-    }
-
     .sun i,
     .widget i {
       color: #{$icon-text-color-light};
@@ -100,6 +91,17 @@
       &::before {
         background: #{$bg-gradient-light};
       }
+    }
+
+    .sun-name,
+    .air-title ,
+    .pollutant span,
+    .widget-name,
+    .day,
+    .time,
+    .daily-temp span,
+    .daily-date {
+      color: #{$secondary-text-color-light};
     }
   }
 }
@@ -178,15 +180,6 @@
       background: #{$primary-bg-color-dark};
     }
 
-    .sun-name,
-    .air-title ,
-    .pollutant span,
-    .widget-name,
-    .day,
-    .time {
-      color: #{$secondary-text-color-dark};
-    }
-
     .sun i,
     .widget i {
       color: #{$icon-text-color-dark};
@@ -204,6 +197,17 @@
       &::before {
         background: #{$bg-gradient-dark};
       }
+    }
+
+    .sun-name,
+    .air-title ,
+    .pollutant span,
+    .widget-name,
+    .day,
+    .time,
+    .daily-temp span,
+    .daily-date {
+      color: #{$secondary-text-color-dark};
     }
   }
 }

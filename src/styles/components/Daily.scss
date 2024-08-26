@@ -23,6 +23,11 @@
             @media screen and (max-width: $tablet) {
                 font-size: 0.875rem;
             }
+
+            span {
+                display: block;
+                font-weight: $light;
+            }
         }
     }
 
