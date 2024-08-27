@@ -18,6 +18,7 @@
     }
 
     .hourly-info {
+        align-items: end;
         cursor: pointer;
         display: flex;
         gap: $size-20;

@@ -1,5 +1,5 @@
-import { getDailyForecast } from "../api";
 import Daily from "./Daily";
+import { getDailyForecast } from "../api";
 import "../styles/components/DailyForecast.scss";
 
 function DailyForecast() {
