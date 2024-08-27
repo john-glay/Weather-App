@@ -34,7 +34,7 @@ function Hourly({ singleData }) {
   return (
     <>
       <div className="day">
-        {showNow ? "Now" : showDate ? formattedDate : ""}
+        {showNow ? "Today at" : showDate ? formattedDate : ""}
       </div>
       <div className="Hourly">
         <div className="time">{formattedTime}</div>

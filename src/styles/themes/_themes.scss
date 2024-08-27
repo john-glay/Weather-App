@@ -100,8 +100,17 @@
     .day,
     .time,
     .daily-temp span,
-    .daily-date {
+    .daily-date,
+    .Footer {
       color: #{$secondary-text-color-light};
+    }
+
+    .Footer a:hover {
+      color: #{$primary-text-color-light};
+    }
+
+    hr {
+      background: #{$container-border-light};
     }
   }
 }
@@ -206,8 +215,17 @@
     .day,
     .time,
     .daily-temp span,
-    .daily-date {
+    .daily-date,
+    .Footer {
       color: #{$secondary-text-color-dark};
+    }
+
+    .Footer a:hover {
+      color: #{$primary-text-color-dark};
+    }
+
+    hr {
+      background: #{$container-border-dark};
     }
   }
 }

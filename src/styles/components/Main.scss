@@ -33,4 +33,14 @@
         margin: 0;
         width: auto;
     }
+
+    hr {
+        border: none;
+        height: 1px;
+        margin: $size-30 0 $size-15 0;
+
+        @media screen and (max-width: $tablet) {
+            margin: $size-20 0 $size-15 0;
+        }
+    }
 }

@@ -1,0 +1,63 @@
+@use '../variables/colors' as *;
+@use '../variables/variables' as *;
+
+.Footer {
+    font-size: 12px;
+    font-weight: $light;
+    transition: $transition-1;
+
+    @media screen and (min-width: $phone) {
+        @include flexbox (flex, center, space-between);
+        height: 1.188rem;
+    }
+
+    @media screen and (max-width: $phone) {
+        text-align: center;
+    }
+
+    .credits {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: $phone) {
+            justify-content: center;
+        }
+        
+        a {
+            color: inherit;
+            display: flex;
+            text-decoration: none;
+            transition: $transition-2;
+
+            &:hover {
+                font-weight: $semi-bold;
+            }
+    
+            img {
+                height: $size-20;
+            }
+        }
+    }
+
+    .socials {
+        display: flex;
+        align-items: center;
+        gap: $size-10;
+
+        @media screen and (max-width: $phone) {
+            height: 1.563rem;
+            margin-top: $size-10;
+            justify-content: center;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: $transition-2;
+
+            i {
+                font-size: $size-20;
+            }
+        }
+    }
+}
