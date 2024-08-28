@@ -1,17 +1,28 @@
 import Header from "./Header";
+import Footer from "./Footer";
 import Highlights from "./Highlights";
 import DailyForecast from "./DailyForecast";
 import HourlyForecast from "./HourlyForecast";
+import MainLoader from "../loader/MainLoader";
+import WeatherContext from "../context/weather.context";
+import { useContext } from "react";
 import "../styles/components/Main.scss";
-import Footer from "./Footer";
 
 function Main() {
+  const { loading } = useContext(WeatherContext);
+  
   return (
     <div className="Main">
       <Header />
-      <Highlights />
-      <HourlyForecast />
-      <DailyForecast />
+      {loading ? (
+        <MainLoader />
+      ) : (
+        <>
+          <Highlights />
+          <HourlyForecast />
+          <DailyForecast />
+        </>
+      )}
       <hr />
       <Footer />
     </div>

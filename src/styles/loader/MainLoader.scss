@@ -1,0 +1,238 @@
+@use '../variables/variables' as *;
+
+.HighlightsLoader {
+    margin-top: $size-30;
+
+    @media screen and (max-width: $tablet) {
+        margin-top: $size-15;
+    }
+
+    .title {
+        font-size: 1.125rem;
+        font-weight: $semi-bold;
+
+        @media screen and (max-width: $tablet) {
+            font-size: 1rem;
+        }
+    }
+
+    .highlights-info {
+        display: grid;
+        gap: $size-20;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: $size-20;
+
+        @media screen and (max-width: $tablet) {
+            gap: $size-15;
+            margin-top: $size-10;
+        }
+    }
+
+    .SunriseSunset {
+        @include flexbox (flex, center, space-around);
+        border-radius: $size-10;
+        grid-column: span 4;
+        padding: $size-10 0.75rem $size-20 0.75rem;
+        transition: $transition-1;
+        
+        @media screen and (min-width: $laptop) {
+            grid-column: span 2;
+        } 
+    
+        @media screen and (max-width: $tablet) {
+            padding: 0.313rem $size-15 $size-15 $size-15;
+        }
+    
+        .sun {
+            @include flexbox (flex, center, left);
+            gap: $size-10;
+    
+            @media screen and (max-width: $desktop) {
+                gap: $size-15;
+            }
+    
+            i {
+                font-size: 2.813rem;
+                height: $size-30;
+    
+                @media screen and (max-width: $phone) {
+                    display: none;
+                }
+            }
+    
+            p {
+                font-size: $size-30;
+                font-weight: $semi-bold;
+                line-height: 2rem;
+        
+                .sun-name {
+                    font-size: 0.938rem;
+                    font-weight: $light;
+    
+                    @media screen and (max-width: $tablet) {
+                        font-size: 0.875rem;
+                    }
+                }
+    
+                .sunrise,
+                .sunset {
+                    height: $size-30;
+                    width: 8rem;
+                }
+            }
+        }
+    }
+
+    .AirQuality {
+        border-radius: $size-10;
+        grid-column: span 4;
+        padding: $size-20;
+        transition: $transition-1;
+        
+        @media screen and (min-width: $laptop) {
+            grid-column: span 2;
+        } 
+        
+        @media screen and (min-width: $desktop) {
+            grid-row-start: 2;
+        }
+    
+        @media screen and (max-width: $tablet) {
+            padding: $size-15 $size-15 $size-10 $size-15;
+        }
+    
+        .air-header {
+            @include flexbox (flex, start, space-between);
+            margin-bottom: 1rem;
+    
+            @media screen and (max-width: $tablet) {
+                margin-bottom: $size-15;
+            }
+    
+            .air-title {
+                font-weight: $light;
+            }
+    
+            .air-index {
+                width: 40px;
+            }
+        }
+    
+        .air-pollutants {
+            @include flexbox (flex, center, space-around);
+    
+            .pollutant {
+                .value {
+                    height: $size-30;
+                    width: 80px;
+                    
+                    @media screen and (max-width: $laptop) {
+                        width: 120px;
+                    }
+                    
+                    @media screen and (max-width: $tablet) {
+                        width: 90px;
+                    }
+                    
+                    @media screen and (max-width: $phone) {
+                        width: 70px;
+                    }
+                }
+
+                .span {
+                    display: block;
+                    font-size: 0.938rem;
+                    font-weight: $light;
+                    margin-top: 0.875rem;
+                    text-align: center;
+
+                    @media screen and (max-width: $tablet) {
+                        font-size: 0.875rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .Map {
+        border-radius: $size-10;
+        grid-column: span 4;
+        height: 25rem;
+        transition: $transition-1;
+        width: 100%;
+        z-index: 1;
+    
+        @media screen and (min-width: $desktop) {
+            grid-column: span 2;
+            grid-row: span 2;
+            height: auto;
+        }
+    
+        .render-map {
+            border-radius: $size-10;
+            height: 25rem;
+            transition: $transition-1;
+            width: 100%;
+    
+            @media screen and (min-width: $desktop) {
+                height: 17rem;
+            }
+        }
+    }
+
+    .Widgets {
+        @include flexbox (flex, center, center);
+        border-radius: $size-10;
+        padding: $size-10 0.75rem $size-20 0.75rem;
+        transition: $transition-1;
+    
+        @media screen and (max-width: $tablet) {
+            padding: 0.313rem $size-15 $size-15 $size-15;
+        }
+    
+        @media screen and (max-width: $laptop) {
+            grid-column: span 2;
+        }
+    
+        .widget {
+            @include flexbox (flex, center, center);
+            gap: $size-20;
+    
+            @media screen and (max-width: $laptop) {
+                gap: $size-15;
+            }
+    
+            i {
+                font-size: 2.188rem;
+                height: 1.563rem;
+            }
+    
+            p {
+                font-size: $size-30;
+                font-weight: $semi-bold;
+                line-height: 2rem;
+        
+                .widget-name {
+                    font-size: 0.938rem;
+                    font-weight: $light;
+    
+                    @media screen and (max-width: $tablet) {
+                        font-size: 0.875rem;
+                    }
+                }
+
+                .value {
+                    width: 6.5rem;
+    
+                    @media screen and (max-width: $laptop) {
+                        width: 9rem;
+                    }
+    
+                    @media screen and (max-width: $phone) {
+                        width: 6rem;
+                    }
+                }
+            }
+        }
+    }
+}
