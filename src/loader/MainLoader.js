@@ -144,6 +144,73 @@ function MainLoader() {
           </div>
         </div>
       </div>
+
+      {/* Daily Forecast */}
+      <div className="DailyForecastLoader">
+        <h1 className="title">5-Day Forecast</h1>
+        <div className="daily-info">
+          <div className="Daily">
+            <div className="daily-weather">
+              <Skeleton className="img" />
+              <div className="daily-temp">
+                <Skeleton className="temp" />
+                <Skeleton className="temp" />
+              </div>
+            </div>
+            <div className="daily-date">
+              <Skeleton />
+            </div>
+          </div>
+          <div className="Daily">
+            <div className="daily-weather">
+              <Skeleton className="img" />
+              <div className="daily-temp">
+                <Skeleton className="temp" />
+                <Skeleton className="temp" />
+              </div>
+            </div>
+            <div className="daily-date">
+              <Skeleton />
+            </div>
+          </div>
+          <div className="Daily">
+            <div className="daily-weather">
+              <Skeleton className="img" />
+              <div className="daily-temp">
+                <Skeleton className="temp" />
+                <Skeleton className="temp" />
+              </div>
+            </div>
+            <div className="daily-date">
+              <Skeleton />
+            </div>
+          </div>
+          <div className="Daily">
+            <div className="daily-weather">
+              <Skeleton className="img" />
+              <div className="daily-temp">
+                <Skeleton className="temp" />
+                <Skeleton className="temp" />
+              </div>
+            </div>
+            <div className="daily-date">
+              <Skeleton />
+            </div>
+          </div>
+          <div className="Daily">
+            <div className="daily-weather">
+              <Skeleton className="img" />
+              <div className="daily-temp">
+                <Skeleton className="temp" />
+                <Skeleton className="temp" />
+              </div>
+            </div>
+            <div className="daily-date">
+              <Skeleton />
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

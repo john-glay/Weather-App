@@ -20,7 +20,7 @@ function Daily({ singleData }) {
         <WeatherIcon icon={icon} description={description} />
         <div className="daily-temp">
           {Math.ceil(temp)}°C
-          <span>{Math.ceil(feels_like)}°C</span>
+          <span className="span">{Math.ceil(feels_like)}°C</span>
         </div>
       </div>
       <div className="daily-date">{formattedDate}</div>
