@@ -104,6 +104,46 @@ function MainLoader() {
       </div>
 
       {/* Hourly Forecast */}
+      <div className="HourlyForecastLoader">
+        <h1 className="title">3-Hour Forecast</h1>
+        <div className="hourly-info">
+          <div className="Hourly">
+            <Skeleton className="time" />
+            <Skeleton className="img" />
+            <Skeleton className="hourly-temp" />
+          </div>
+          <div className="Hourly">
+            <Skeleton className="time" />
+            <Skeleton className="img" />
+            <Skeleton className="hourly-temp" />
+          </div>
+          <div className="Hourly">
+            <Skeleton className="time" />
+            <Skeleton className="img" />
+            <Skeleton className="hourly-temp" />
+          </div>
+          <div className="Hourly">
+            <Skeleton className="time" />
+            <Skeleton className="img" />
+            <Skeleton className="hourly-temp" />
+          </div>
+          <div className="Hourly">
+            <Skeleton className="time" />
+            <Skeleton className="img" />
+            <Skeleton className="hourly-temp" />
+          </div>
+          <div className="Hourly">
+            <Skeleton className="time" />
+            <Skeleton className="img" />
+            <Skeleton className="hourly-temp" />
+          </div>
+          <div className="Hourly">
+            <Skeleton className="time" />
+            <Skeleton className="img" />
+            <Skeleton className="hourly-temp" />
+          </div>
+        </div>
+      </div>
     </>
   );
 }

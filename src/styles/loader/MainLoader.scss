@@ -236,3 +236,54 @@
         }
     }
 }
+
+.HourlyForecastLoader {
+    margin: $size-30 1px 0 0;
+
+    @media screen and (max-width: $tablet) {
+        margin-top: $size-15;
+    }
+
+    .title {
+        font-size: 1.125rem;
+        font-weight: $semi-bold;
+
+        @media screen and (max-width: $tablet) {
+            font-size: 1rem;
+        }
+    }
+
+    .hourly-info {
+        @include no-text-select;
+        align-items: end;
+        cursor: pointer;
+        display: flex;
+        gap: $size-20;
+        margin-top: $size-20;
+        overflow: hidden;
+
+        @media screen and (max-width: $tablet) {
+            gap: $size-15;
+            margin-top: $size-10;
+        }
+
+        .Hourly { 
+            border-radius: $size-10;
+            padding: 1.188rem 1.75rem;
+            transition: $transition-1;
+
+            .time,
+            .hourly-temp {
+                height: $size-15;
+                margin: 0 0.5625rem;
+                width: 2rem;
+            }
+        
+            .img {
+                height: 3.125rem;
+                margin: $size-10 auto;
+                width: 3.125rem;
+            }
+        }
+    }
+}
