@@ -1,9 +1,7 @@
 import WeatherIcon from "./WeatherIcon";
-import { getCurrentWeather } from "../api";
 import "../styles/components/Weather.scss";
 
-function Weather() {
-  const data = getCurrentWeather();
+function Weather({ data }) {
   const { temp } = data.main;
   const { description, icon } = data.weather[0];
 

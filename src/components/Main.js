@@ -9,8 +9,8 @@ import { useContext } from "react";
 import "../styles/components/Main.scss";
 
 function Main() {
-  const { loading } = useContext(WeatherContext);
-  
+  const { loading, currentWeather, airPollution } = useContext(WeatherContext);
+
   return (
     <div className="Main">
       <Header />
@@ -18,7 +18,10 @@ function Main() {
         <MainLoader />
       ) : (
         <>
-          <Highlights />
+          <Highlights
+            currentWeather={currentWeather}
+            airPollution={airPollution}
+          />
           <HourlyForecast />
           <DailyForecast />
         </>

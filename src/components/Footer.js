@@ -29,13 +29,13 @@ function Footer() {
       <div className="socials">
         <p className="name">John Glay.</p>
         <a href="https://github.com/john-glay" target="blank">
-          <i class="bi bi-github"></i>
+          <i className="bi bi-github"></i>
         </a>
         <a
           href="https://www.linkedin.com/in/john-glay-bunao-8b5948255/"
           target="blank"
         >
-          <i class="bi bi-linkedin"></i>
+          <i className="bi bi-linkedin"></i>
         </a>
       </div>
     </div>

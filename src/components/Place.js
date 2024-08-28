@@ -1,10 +1,11 @@
 import isoCountries from "../api/isoCountries";
-import { getCurrentWeather } from "../api";
+import WeatherContext from "../context/weather.context";
+import { useContext } from "react";
 import "../styles/components/Place.scss";
 
 function Place() {
-  const data = getCurrentWeather();
-  const country = isoCountries[data.sys.country] || data.sys.country;
+  const { place } = useContext(WeatherContext);
+  const country = isoCountries[place.country] || place.country;
   const now = new Date();
 
   const optionsDate = {
@@ -19,7 +20,7 @@ function Place() {
     <div className="Place">
       <i className="bi bi-geo-alt-fill"></i>
       <div className="location">
-        <p className="city">{data.name},&nbsp;</p>
+        <p className="city">{place.name},&nbsp;</p>
         <p className="country">{country}</p>
         <p className="place-date">
           <span>•</span>

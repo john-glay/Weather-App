@@ -1,9 +1,6 @@
-import { getCurrentWeather } from "../api";
 import "../styles/components/Widgets.scss";
 
-function Widgets() {
-  const data = getCurrentWeather();
-
+function Widgets({ data }) {
   const humidity = data.main.humidity;
   const wind = data.wind.speed.toFixed(1);
   const visibility = (data.visibility / 1000).toFixed(1);

@@ -1,9 +1,6 @@
-import { getCurrentWeather } from "../api";
 import "../styles/components/SunriseSunset.scss";
 
-function SunriseSunset() {
-  const data = getCurrentWeather();
-
+function SunriseSunset({ data }) {
   const convertTime = (timestamp) => {
     // Convert timestamp to milliseconds
     const date = new Date(timestamp * 1000);

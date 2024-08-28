@@ -1,14 +1,5 @@
-import currentWeather from "./current-weather.json";
-import airPollution from "./air-pollution.json";
 import forecast from "./forecast.json";
-
-function getCurrentWeather() {
-  return currentWeather;
-}
-
-function getAirPollution() {
-  return airPollution;
-}
+import axios from "axios";
 
 function getHourlyForecast() {
   const now = new Date();
@@ -42,9 +33,28 @@ function getDailyForecast() {
   return fiveDayForecast;
 }
 
-export {
-  getCurrentWeather,
-  getAirPollution,
-  getHourlyForecast,
-  getDailyForecast,
-};
+export { getHourlyForecast, getDailyForecast };
+
+const API_KEY = process.env.REACT_APP_OPENWEATHER_API_KEY;
+
+export async function getWeatherData(location, measurementSystem) {
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}&units=${measurementSystem}`;
+
+  try {
+    const response = await axios.get(url);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export async function getAirQualityIndex(lat, lon) {
+  const url = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
+
+  try {
+    const response = await axios.get(url);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+  }
+}

@@ -7,15 +7,15 @@ function Settings() {
   const units = [
     {
       id: "0",
-      system: "standard",
+      system: "Celsius",
     },
     {
       id: "1",
-      system: "metric",
+      system: "Fahrenheit",
     },
     {
       id: "2",
-      system: "imperial",
+      system: "Kelvin",
     },
   ];
 
@@ -30,7 +30,7 @@ function Settings() {
         <div className="measurements">
           {units.map(({ id, system }) => (
             <div
-              className={`system ${system === "standard" ? "active" : ""}`}
+              className={`system ${system === "Celsius" ? "active" : ""}`}
               key={id}
             >
               {system}
