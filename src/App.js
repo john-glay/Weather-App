@@ -1,6 +1,7 @@
-import { useContext, useEffect } from "react";
 import Content from "./components/Content";
 import ThemeContext from "./context/theme.context";
+import { useContext, useEffect } from "react";
+import { SkeletonTheme } from "react-loading-skeleton";
 import "./styles/components/App.scss";
 import "bootstrap-icons/font/bootstrap-icons.scss";
 
@@ -29,9 +30,14 @@ function App() {
   }, [dark]);
 
   return (
-    <div className={`App-${dark ? "dark" : "light"}`}>
-      <Content />
-    </div>
+    <SkeletonTheme
+      baseColor={dark ? "#313131" : "#e0e0e0"}
+      highlightColor={dark ? "#525252" : "#f5f5f5"}
+    >
+      <div className={`App-${dark ? "dark" : "light"}`}>
+        <Content />
+      </div>
+    </SkeletonTheme>
   );
 }
 

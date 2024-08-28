@@ -1,8 +1,12 @@
 import Place from "./Place";
 import Weather from "./Weather";
+import SidebarLoader from "../loader/SidebarLoader";
+import WeatherContext from "../context/weather.context";
+import { useContext } from "react";
 import "../styles/components/Sidebar.scss";
 
 function Sidebar() {
+  const { loading } = useContext(WeatherContext);
   const now = new Date();
 
   const optionsDate = {
@@ -22,8 +26,14 @@ function Sidebar() {
 
   return (
     <div className="Sidebar">
-      <Place />
-      <Weather />
+      {loading ? (
+        <SidebarLoader />
+      ) : (
+        <>
+          <Place />
+          <Weather />
+        </>
+      )}
       <div className="date">
         {formattedDate}
         <span>•</span>
