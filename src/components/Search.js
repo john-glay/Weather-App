@@ -21,23 +21,22 @@ function Search() {
     }
 
     try {
-      const data = await searchPlaces(searchText);
-
-      if (data && data.length > 0) {
-        // Create a Set to track unique combinations of city and country
-        const uniqueResults = data.filter(
-          (place, index, self) =>
-            index ===
-            self.findIndex(
-              (p) => p.name === place.name && p.country === place.country
-            )
-        );
-
-        setSearchResults(uniqueResults);
-        setOpenSearchResults(true);
-      } else {
-        setSearchResults([]);
-        setOpenSearchResults(false);
+      if (searchText !== "") {
+        const data = await searchPlaces(searchText);
+        if (data && data.length > 0) {
+          const uniqueResults = data.filter(
+            (place, index, self) =>
+              index ===
+              self.findIndex(
+                (p) => p.name === place.name && p.country === place.country
+              )
+          );
+          setSearchResults(uniqueResults);
+          setOpenSearchResults(true);
+        } else {
+          setSearchResults([]);
+          setOpenSearchResults(false);
+        }
       }
     } catch (error) {
       console.error("Error during search:", error);
@@ -61,7 +60,7 @@ function Search() {
         value={text}
         onChange={onSearch}
       />
-      {openSearchResults && (
+      {openSearchResults && searchResults.length > 0 && (
         <div className="search-results">
           {searchResults.map((place) => (
             <div

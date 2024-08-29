@@ -15,7 +15,7 @@
         padding: $size-30;
         position: sticky;
         top: 3.75rem;
-        width: 18.5rem;
+        width: auto; //18.5rem
     }
 
     @media screen and (max-width: $desktop) {

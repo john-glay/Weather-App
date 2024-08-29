@@ -27,3 +27,8 @@ export async function searchPlaces(text) {
   const url = `http://api.openweathermap.org/geo/1.0/direct?q=${text}&limit=5&appid=${API_KEY}`;
   return await fetchData(url);
 }
+
+export async function currentPlace(lat, lon) {
+  const url = `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=${API_KEY}`;
+  return await fetchData(url);
+}
