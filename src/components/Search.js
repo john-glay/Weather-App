@@ -1,29 +1,55 @@
-import { useState } from "react";
+import isoCountries from "../api/isoCountries";
+import WeatherContext from "../context/weather.context";
+import { useContext, useState } from "react";
+import { searchPlaces } from "../api";
 import "../styles/components/Search.scss";
 
 function Search() {
-  const [openSearchResults, setOpenSearchResults] = useState(false);
+  const { setPlace } = useContext(WeatherContext);
   const [text, setText] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+  const [openSearchResults, setOpenSearchResults] = useState(false);
 
-  const searchResults = [
-    {
-      id: "0",
-      name: "City, Country",
-    },
-    {
-      id: "1",
-      name: "City, Country",
-    },
-    {
-      id: "2",
-      name: "City, Country",
-    },
-  ];
+  async function onSearch(e) {
+    const searchText = e.target.value;
+    setText(searchText);
 
-  const onSearch = (event) => {
-    const value = event.target.value;
-    setText(value);
-    setOpenSearchResults(value.length > 0); // Open results only if input is not empty
+    if (searchText.trim() === "") {
+      setSearchResults([]);
+      setOpenSearchResults(false);
+      return;
+    }
+
+    try {
+      const data = await searchPlaces(searchText);
+
+      if (data && data.length > 0) {
+        // Create a Set to track unique combinations of city and country
+        const uniqueResults = data.filter(
+          (place, index, self) =>
+            index ===
+            self.findIndex(
+              (p) => p.name === place.name && p.country === place.country
+            )
+        );
+
+        setSearchResults(uniqueResults);
+        setOpenSearchResults(true);
+      } else {
+        setSearchResults([]);
+        setOpenSearchResults(false);
+      }
+    } catch (error) {
+      console.error("Error during search:", error);
+      setSearchResults([]);
+      setOpenSearchResults(false);
+    }
+  }
+
+  const changePlace = (place) => {
+    setPlace(place);
+    setText("");
+    setOpenSearchResults(false);
   };
 
   return (
@@ -37,10 +63,14 @@ function Search() {
       />
       {openSearchResults && (
         <div className="search-results">
-          {searchResults.map(({ id, name }) => (
-            <div className="results-container" key={id}>
+          {searchResults.map((place) => (
+            <div
+              className="results-container"
+              key={`${place.lat}-${place.lon}`}
+              onClick={() => changePlace(place)}
+            >
               <i className="bi bi-search"></i>
-              {name}
+              {place.name}, {isoCountries[place.country] || place.country}
             </div>
           ))}
         </div>

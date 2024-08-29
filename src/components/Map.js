@@ -11,9 +11,9 @@ function Map({ center }) {
   useEffect(() => {
     const map = new maplibregl.Map({
       container: mapContainer.current,
-      style: `https://api.maptiler.com/maps/dataviz/style.json?key=${API_KEY}`,
+      style: `https://api.maptiler.com/maps/basic/style.json?key=${API_KEY}`,
       center: center,
-      zoom: 10,
+      zoom: 9.5,
       attributionControl: false,
       scrollZoom: false, // Disable scroll zoom
       dragPan: false, // Disable dragging

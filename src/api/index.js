@@ -22,3 +22,8 @@ export async function getAirQualityIndex(lat, lon) {
   const url = `${BASE_URL}/air_pollution?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
   return await fetchData(url);
 }
+
+export async function searchPlaces(text) {
+  const url = `http://api.openweathermap.org/geo/1.0/direct?q=${text}&limit=5&appid=${API_KEY}`;
+  return await fetchData(url);
+}

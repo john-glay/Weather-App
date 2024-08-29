@@ -53,6 +53,7 @@ function WeatherProvider({ children }) {
     <WeatherContext.Provider
       value={{
         place,
+        setPlace,
         loading,
         currentWeather,
         airPollution,
