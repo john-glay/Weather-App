@@ -1,6 +1,6 @@
 import "../styles/components/Widgets.scss";
 
-function Widgets({ data }) {
+function Widgets({ data, units }) {
   const humidity = data.main.humidity;
   const wind = data.wind.speed.toFixed(1);
   const visibility = (data.visibility / 1000).toFixed(1);
@@ -19,7 +19,7 @@ function Widgets({ data }) {
       icon: "wind",
       name: "Wind",
       value: wind,
-      unit: "mps", // Standard: m/s, Metric: m/s, Imperial: m/h
+      unit: units.wind_speed, // Metric: m/s, Imperial: m/h, Standard: m/s
     },
     {
       id: 2,

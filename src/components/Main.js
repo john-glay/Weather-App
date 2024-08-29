@@ -41,7 +41,7 @@ function getDailyForecast(forecast) {
 }
 
 function Main() {
-  const { loading, currentWeather, airPollution, weatherForecast } =
+  const { loading, currentWeather, airPollution, weatherForecast, units } =
     useContext(WeatherContext);
   const hourlyForecastData = getHourlyForecast(weatherForecast);
   const dailyForecastData = getDailyForecast(weatherForecast);
@@ -56,9 +56,10 @@ function Main() {
           <Highlights
             currentWeather={currentWeather}
             airPollution={airPollution}
+            units={units}
           />
-          <HourlyForecast data={hourlyForecastData} />
-          <DailyForecast data={dailyForecastData} />
+          <HourlyForecast data={hourlyForecastData} units={units} />
+          <DailyForecast data={dailyForecastData} units={units} />
         </>
       )}
       <hr />

@@ -5,17 +5,23 @@ export const DEFAULT_PLACE = {
   country: "PH",
 };
 
+export const MEASUREMENT_SYSTEMS = {
+  Celsius: "metric",
+  Fahrenheit: "imperial",
+  Kelvin: "standard",
+};
+
 export const UNITS = {
-  Celsius: {
-    temperature: "°C",
+  metric: {
+    temperature: " °C",
     wind_speed: "m/s",
   },
-  Fahrenheit: {
-    temperature: "°F",
-    wind_speed: "m/s",
-  },
-  Kelvin: {
-    temperature: "K",
+  imperial: {
+    temperature: " °F",
     wind_speed: "m/h",
+  },
+  standard: {
+    temperature: " K",
+    wind_speed: "m/s",
   },
 };

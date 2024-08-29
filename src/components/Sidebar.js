@@ -6,7 +6,7 @@ import { useContext } from "react";
 import "../styles/components/Sidebar.scss";
 
 function Sidebar() {
-  const { loading, currentWeather } = useContext(WeatherContext);
+  const { loading, currentWeather, units } = useContext(WeatherContext);
   const now = new Date();
 
   const optionsDate = {
@@ -31,7 +31,7 @@ function Sidebar() {
       ) : (
         <>
           <Place />
-          <Weather data={currentWeather} />
+          <Weather data={currentWeather} units={units} />
         </>
       )}
       <div className="date">

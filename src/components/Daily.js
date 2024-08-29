@@ -1,7 +1,7 @@
 import WeatherIcon from "./WeatherIcon";
 import "../styles/components/Daily.scss";
 
-function Daily({ singleData }) {
+function Daily({ singleData, units }) {
   const { icon, description } = singleData.weather[0];
   const { temp, feels_like } = singleData.main;
   const date = new Date(singleData.dt_txt);
@@ -19,8 +19,12 @@ function Daily({ singleData }) {
       <div className="daily-weather">
         <WeatherIcon icon={icon} description={description} />
         <div className="daily-temp">
-          {Math.ceil(temp)}°C
-          <span className="span">{Math.ceil(feels_like)}°C</span>
+          {Math.ceil(temp)}
+          {units.temperature}
+          <span className="span">
+            {Math.ceil(feels_like)}
+            {units.temperature}
+          </span>
         </div>
       </div>
       <div className="daily-date">{formattedDate}</div>

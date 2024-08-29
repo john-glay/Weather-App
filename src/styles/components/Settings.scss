@@ -72,10 +72,10 @@
 
             .system {
                 border-radius: 0.313rem;
+                font-weight: 400;
                 padding: 0.313rem $size-10;
 
                 &.active {
-                    font-weight: 400;
                     transition: $transition-1;
                 }
 

@@ -4,7 +4,7 @@ import AirQuality from "./AirQuality";
 import SunriseSunset from "./SunriseSunset";
 import "../styles/components/Highlights.scss";
 
-function Highlights({ currentWeather, airPollution }) {
+function Highlights({ currentWeather, airPollution, units }) {
   const { lon, lat } = currentWeather.coord;
   const location = [lon, lat];
 
@@ -15,7 +15,7 @@ function Highlights({ currentWeather, airPollution }) {
         <SunriseSunset data={currentWeather} />
         <AirQuality data={airPollution} />
         <Map center={location} />
-        <Widgets data={currentWeather} />
+        <Widgets data={currentWeather} units={units} />
       </div>
     </div>
   );

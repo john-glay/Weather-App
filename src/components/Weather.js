@@ -1,7 +1,7 @@
 import WeatherIcon from "./WeatherIcon";
 import "../styles/components/Weather.scss";
 
-function Weather({ data }) {
+function Weather({ data, units }) {
   const { temp } = data.main;
   const { description, icon } = data.weather[0];
 
@@ -11,7 +11,7 @@ function Weather({ data }) {
       <div>
         <p className="temperature">
           {Math.ceil(temp)}
-          <span>°C</span>
+          <span>{units.temperature}</span>
         </p>
         <div className="description">{description}</div>
       </div>

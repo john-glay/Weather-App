@@ -1,7 +1,7 @@
 import "../styles/components/Hourly.scss";
 import WeatherIcon from "./WeatherIcon";
 
-function Hourly({ singleData }) {
+function Hourly({ singleData, units }) {
   const { icon, description } = singleData.weather[0];
   const { temp } = singleData.main;
   const date = new Date(singleData.dt_txt);
@@ -39,7 +39,10 @@ function Hourly({ singleData }) {
       <div className="Hourly">
         <div className="time">{formattedTime}</div>
         <WeatherIcon icon={icon} description={description} />
-        <div className="hourly-temp">{Math.ceil(temp)}°C</div>
+        <div className="hourly-temp">
+          {Math.ceil(temp)}
+          {units.temperature}
+        </div>
       </div>
     </>
   );
