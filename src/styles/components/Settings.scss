@@ -58,7 +58,7 @@
 
         .measurements {
             @include flexbox (flex, center, space-between);
-            font-size: 0.75rem;
+            font-size: 0.875rem;
             gap: $size-10;
             margin-top: $size-10;
 
@@ -66,11 +66,16 @@
                 flex-wrap: wrap;
             }
 
+            @media screen and (max-width: $tablet) {
+                font-size: 0.75rem;
+            }
+
             .system {
                 border-radius: 0.313rem;
                 padding: 0.313rem $size-10;
 
                 &.active {
+                    font-weight: 400;
                     transition: $transition-1;
                 }
 

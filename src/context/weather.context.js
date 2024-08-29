@@ -1,5 +1,5 @@
-import { createContext, useEffect, useState } from "react";
 import { DEFAULT_PLACE } from "../constants";
+import { createContext, useEffect, useState } from "react";
 import { getWeatherData, getAirQualityIndex } from "../api";
 
 const WeatherContext = createContext();
@@ -9,33 +9,40 @@ function WeatherProvider({ children }) {
   const [loading, setLoading] = useState(true);
   const [currentWeather, setCurrentWeather] = useState({});
   const [airPollution, setAirPollution] = useState([]);
-  // const [forecast, setForecast] = useState([]);
+  const [weatherForecast, setWeatherForecast] = useState([]);
 
   useEffect(() => {
-    async function _getWeatherData() {
+    async function fetchData() {
       setLoading(true);
+      try {
+        const [cw, forecast, aqi] = await Promise.all([
+          getWeatherData("weather", place.lat, place.lon, "metric"),
+          getWeatherData("forecast", place.lat, place.lon, "metric"),
+          getAirQualityIndex(place.lat, place.lon),
+        ]);
 
-      const cw = await getWeatherData(place.name, "metric");
-      setCurrentWeather(cw);
-
-      setLoading(false);
+        setCurrentWeather(cw);
+        setWeatherForecast(forecast.list);
+        setAirPollution(aqi.list);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false);
+      }
     }
-    _getWeatherData();
 
-    async function _getAirQualityIndex() {
-      setLoading(true);
-
-      const aqi = await getAirQualityIndex(place.lat, place.lon);
-      setAirPollution(aqi);
-
-      setLoading(false);
-    }
-    _getAirQualityIndex();
+    fetchData();
   }, [place]);
 
   return (
     <WeatherContext.Provider
-      value={{ place, loading, currentWeather, airPollution }}
+      value={{
+        place,
+        loading,
+        currentWeather,
+        airPollution,
+        weatherForecast,
+      }}
     >
       {children}
     </WeatherContext.Provider>

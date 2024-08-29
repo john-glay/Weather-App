@@ -1,10 +1,7 @@
 import Daily from "./Daily";
-import { getDailyForecast } from "../api";
 import "../styles/components/DailyForecast.scss";
 
-function DailyForecast() {
-  const data = getDailyForecast();
-
+function DailyForecast({ data }) {
   return (
     <div className="DailyForecast">
       <h1 className="title">5-Day Forecast</h1>

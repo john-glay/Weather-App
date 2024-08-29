@@ -1,8 +1,8 @@
 import "../styles/components/AirQuality.scss";
 
 function AirQuality({ data }) {
-  const { aqi } = data.list[0].main;
-  const { pm2_5, so2, no2, o3 } = data.list[0].components;
+  const { aqi } = data[0].main;
+  const { pm2_5, so2, no2, o3 } = data[0].components;
 
   const airQuality = {
     1: "good",
