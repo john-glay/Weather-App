@@ -21,7 +21,7 @@ function Search() {
     }
 
     try {
-      if (searchText !== "") {
+      if (searchText.trim() !== "") {
         const data = await searchPlaces(searchText);
         if (data && data.length > 0) {
           const uniqueResults = data.filter(
@@ -59,6 +59,7 @@ function Search() {
         placeholder="Search for location"
         value={text}
         onChange={onSearch}
+        onBlur={() => setTimeout(() => setOpenSearchResults(false), 100)}
       />
       {openSearchResults && searchResults.length > 0 && (
         <div className="search-results">
