@@ -30,21 +30,21 @@ Follow these steps to set up and run the project on your local machine for devel
 
 ### Installation
 
-1. **Clone the repository:**
+1. Clone the repository:
 
    ```sh
    git clone https://github.com/john-glay/Weather-App.git
 
    ```
 
-2. **Navigate to the project directory:**
+2. Navigate to the project directory:
 
    ```sh
    cd Weather-App
 
    ```
 
-3. **Install dependencies:**
+3. Install dependencies:
 
    ```sh
    yarn install
@@ -53,7 +53,7 @@ Follow these steps to set up and run the project on your local machine for devel
 
    ```
    
-4. **Create a  `.env`  file in the root directory and add your OpenWeather API key and MapTiler API key:**
+4. Create a  `.env`  file in the root directory and add your OpenWeather API key and MapTiler API key:
 
    ```sh
    REACT_APP_OPENWEATHER_API_KEY = "your_api_key_here"
