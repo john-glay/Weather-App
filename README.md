@@ -4,7 +4,7 @@ ReactJS Weather App project!
 
 <div align='center'>
    <a href='https://weather-app-john-glay.vercel.app/' target="_blank">
-      <img src='./public/images/pic.png' alt='calculator' />
+      <img src='./public/images/pic.png' alt='weather-app' />
    </a>
 </div>
 
@@ -34,14 +34,12 @@ Follow these steps to set up and run the project on your local machine for devel
 
    ```sh
    git clone https://github.com/john-glay/Weather-App.git
-
    ```
 
 2. Navigate to the project directory:
 
    ```sh
    cd Weather-App
-
    ```
 
 3. Install dependencies:
@@ -50,7 +48,6 @@ Follow these steps to set up and run the project on your local machine for devel
    yarn install
    # or
    npm install
-
    ```
    
 4. Create a  `.env`  file in the root directory and add your OpenWeather API key and MapTiler API key:
@@ -58,7 +55,6 @@ Follow these steps to set up and run the project on your local machine for devel
    ```sh
    REACT_APP_OPENWEATHER_API_KEY = "your_api_key_here"
    REACT_APP_MAPTILER_API_KEY = "your_api_key_here"
-
    ```
 
 ### Usage
@@ -69,7 +65,6 @@ Follow these steps to set up and run the project on your local machine for devel
    yarn start
    # or
    npm start
-
    ```
 
 2. Open your browser and go to [http://localhost:3000](http://localhost:3000) to see the app in action.
